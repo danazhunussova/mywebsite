@@ -1,0 +1,71 @@
+@import "vars";
+@import "fonts";
+@import "size_mixin";
+@import "ui_kit";
+@import "sections";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+
+img {
+    border: none;
+}
+
+table,
+tr,
+td {
+    border: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.1s ease opacity;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+input, textarea{
+    width: 100%;
+    border: none;
+    background: unset;
+    font: inherit;
+    color: inherit;
+    resize: none; 
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button{
+    font: inherit;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+
+body{
+    display: block;
+    background:$white;
+    font-family: 'Ubuntu';
+    
+}

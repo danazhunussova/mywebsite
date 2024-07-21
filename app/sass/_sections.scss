@@ -1,0 +1,238 @@
+@import "vars";
+@import "fonts";
+@import "size_mixin";
+@import "ui_kit";
+
+/*** INTRO SECTION ***/
+.hero{
+    padding: 40px;
+    padding-top:80px;
+    background: $blueEllipse;
+    color:$dark; 
+    .hero-text{
+        padding: 40px;
+        padding-top:80px;
+        width:fit-content;
+        display:flex;
+        flex-direction: column;
+        gap:30px;
+    
+        h1{
+            width:90%;
+        }        
+        h4{   
+            line-height: 1.3;
+            width: 65%;           
+        }
+        .button{
+            margin-top:40px;
+        }
+       
+    }
+}
+
+/*** ABOUT SECTION ***/
+.about {
+    background-color: $lightGrey;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    h2 span{
+        font-size:larger;
+    }
+    .highlight{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:40px;
+        li{
+            display: flex;
+            &::before {
+                content: "\2022";
+                color: $blue;
+                font-size: 24px;
+                margin-right: 14px;
+            }
+            p{
+                font-size: 16px;
+            }
+    } 
+    }
+}
+
+/*** FEATURES SECTION ***/
+.features{ 
+    text-align: center;
+    .cards {  
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.video-section{
+    video{
+        width:100%;
+        margin-top:70px;
+    }
+
+}
+/*** PRESENTATION SECTIONS ***/
+.presentations{
+    padding:0;
+}
+.presentation{
+    padding:60px 80px;
+    display: flex;
+    gap:80px;
+    align-items: center;
+    justify-content: space-between;
+    &.banner-bg{
+        background-color: $lightGrey;
+    }
+    img{
+        border-radius: 12px;
+        width:300px;
+        height:250px;
+    }
+    .presentation-inner{
+        display: flex;
+        flex-direction: column;
+        gap:25px;
+        h2{
+            color:$darkGrey;
+        }
+        ul{
+            font-size: 20px;
+            line-height: 2;
+            li{
+                position: relative;
+                left: 45px;
+            }
+            li::before{
+                /*content: "✔";
+                width: 1em;*/
+                color: $blue;
+                content: "";
+                display: inline-block;
+                position: absolute;
+                left: -35px;
+                top: 8px;
+                transform: rotate(45deg);
+                height: 16px;
+                width: 8px;
+                border-bottom: 3.5px solid;
+                border-right: 3.5px solid;
+            }
+        }
+       
+    }
+}
+
+/*** HOW-IT-WORKS SECTION ***/
+.how-it-works{
+    
+    .title{
+        text-align: center;
+    }
+    .tabs {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+
+/*** CALL-TO-ACTION SECTION ***/
+.cta-content{
+    background-color: $dark;
+    padding:80px 25px;
+    border-radius: 6px;
+    color:$white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    .cta-inner{
+        display: flex;
+    flex-direction: column;
+        gap:10px;
+    }
+}
+
+/*** FAQ SECTION ***/
+.faq{
+    display:grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap:10px;
+}
+
+/*** ADAPTIVE ***/
+@media (max-width: 700px){    
+    .hero{
+        .hero-text{
+            padding:0;
+            padding-top: 40px;
+            .button{
+                margin-top:20px;
+            }
+            h4{
+                width: 80%;
+            }
+        }
+    }
+    .about{
+        padding:40px 25px;
+        gap:25px;
+        .highlight{
+            grid-template-columns: 1fr;
+        }
+    }
+    .features{
+        .cards{
+            grid-template-columns: 1fr;
+        }
+    }
+    .video-section{
+        video{
+            margin-top:65px;
+        }
+    
+    }
+    .presentations {
+        .presentation {
+            padding: 40px 25px;
+            flex-direction: column;
+
+           
+            .presentation-inner{
+
+                display: flex;
+                order: 1;
+
+                ul{
+                    font-size: 20px;
+                    line-height: 1.5;
+                    li{
+                        margin-left:25px;
+                        margin-right:25px;
+                        left: 5px;
+                    }
+                    li::before{
+                        
+                        left: -25px;
+                        top: 3px;
+                        height: 12px;
+                        width: 6px;
+                        border-bottom: 2.7px solid;
+                        border-right: 2.7px solid;
+                    }
+                }
+            }
+            img {
+                display: flex;
+                order: 2;
+            }
+        }
+    }
+    .faq{
+        grid-template-columns: 1fr;  
+    }
+}
+

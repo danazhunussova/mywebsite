@@ -1,0 +1,30 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+@mixin font($f-name, $f-style, $f-weight, $f-url, $f-url-2)
+	@font-face
+		font-family: $f-name
+		font-style: $f-style
+		font-weight: $f-weight
+		src: url($f-url) format('woff2')
+		src: url($f-url-2) format('woff2') url($f-url) format('woff')
+		
+
+// @include font('Ubuntu', normal, 100, '../fonts/Ubuntu/Ubuntu-Thin.woff', '../fonts/Ubuntu/Ubuntu-Thin.woff2')
+// @include font('Ubuntu', normal, 200, '../fonts/Ubuntu/Ubuntu-ExtraLight.woff', '../fonts/Ubuntu/Ubuntu-ExtraLight.woff2')
+@include font('Ubuntu', normal, 300, '../fonts/Ubuntu/Ubuntu-Light.woff', '../fonts/Ubuntu/Ubuntu-Light.woff2')
+@include font('Ubuntu', normal, 400, '../fonts/Ubuntu/Ubuntu-Regular.woff', '../fonts/Ubuntu/Ubuntu-Regular.woff2')
+@include font('Ubuntu', normal, 500, '../fonts/Ubuntu/Ubuntu-Medium.woff', '../fonts/Ubuntu/Ubuntu-Medium.woff2')
+//@include font('Ubuntu', normal, 600, '../fonts/Ubuntu/Ubuntu-SemiBold.woff', '../fonts/Ubuntu/Ubuntu-SemiBold.woff2')
+@include font('Ubuntu', normal, 700, '../fonts/Ubuntu/Ubuntu-Bold.woff', '../fonts/Ubuntu/Ubuntu-Bold.woff2')
+// @include font('Ubuntu', normal, 800, '../fonts/Ubuntu/Ubuntu-ExtraBold.woff', '../fonts/Ubuntu/Ubuntu-ExtraBold.woff2')
+// @include font('Ubuntu', normal, 900, '../fonts/Ubuntu/Ubuntu-Black.woff', '../fonts/Ubuntu/Ubuntu-Black.woff2')

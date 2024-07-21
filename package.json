@@ -1,0 +1,34 @@
+{
+  "name": "gulp-start",
+  "version": "1.0.0",
+  "description": "start gulp",
+  "main": "index.js",
+  "scripts": {
+    "npm run": "gulp",
+    "gulp": "gulp"
+  },
+  "author": "Dimash2707@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "normalize.css": "^8.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.1",
+    "daterangepicker": "^3.1.0",
+    "fslightbox": "^3.3.1",
+    "fullcalendar": "^6.0.3",
+    "ion-rangeslider": "^2.3.1",
+    "jquery.maskedinput": "^1.4.1",
+    "sass": "^1.39.2",
+    "select2": "^4.1.0-rc.0",
+    "slick-carousel": "^1.8.1"
+  }
+}
